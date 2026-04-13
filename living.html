@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>이거 진짜 초강추템 — 간식토끼</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Black+Han+Sans&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --bg:#FFFBF5; --black:#1A1A1A; --gray:#777; --light:#EAE4D8; --yellow:#FFE135; --orange:#FF6B35; --purple:#A855F7; }
+body { background: var(--bg); color: var(--black); font-family: 'Noto Sans KR', sans-serif; -webkit-font-smoothing: antialiased; }
+header { background: var(--yellow); border-bottom: 3px solid var(--black); padding: 1rem 1.2rem; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+.logo { font-family: 'Black Han Sans', sans-serif; font-size: 1.2rem; text-decoration: none; color: var(--black); }
+.back-link { font-size: 0.7rem; font-weight: 700; color: var(--black); text-decoration: none; border-bottom: 1.5px solid var(--black); }
+.page-hero { background: var(--orange); color: white; padding: 2.2rem 1.4rem 1.8rem; border-bottom: 3px solid var(--black); position: relative; overflow: hidden; }
+.page-hero::after { content: '🧹'; position: absolute; right: 0.8rem; bottom: -0.8rem; font-size: 7rem; opacity: 0.15; line-height: 1; pointer-events: none; }
+.page-hero-num { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.14em; opacity: 0.6; margin-bottom: 0.5rem; }
+.page-hero h1 { font-family: 'Black Han Sans', sans-serif; font-size: clamp(1.5rem, 6vw, 2.2rem); line-height: 1.25; word-break: keep-all; margin-bottom: 0.6rem; }
+.page-hero p { font-size: 0.75rem; opacity: 0.75; line-height: 1.6; }
+.cards-wrap { padding: 1.2rem 1.2rem 5rem; display: flex; flex-direction: column; gap: 14px; max-width: 480px; margin: 0 auto; }
+.item-card { background: white; border: 2.5px solid var(--black); border-radius: 16px; overflow: hidden; }
+.card-top { display: flex; align-items: stretch; min-height: 90px; }
+.card-icon { width: 88px; flex-shrink: 0; background: #FFF3EE; display: flex; align-items: center; justify-content: center; font-size: 2.6rem; border-right: 2.5px solid var(--black); }
+.card-header { flex: 1; padding: 0.9rem 1rem; display: flex; flex-direction: column; justify-content: center; gap: 3px; }
+.card-name { font-family: 'Black Han Sans', sans-serif; font-size: 1rem; line-height: 1.2; }
+.card-brand { font-size: 0.65rem; color: var(--gray); }
+.card-period { display: inline-block; font-size: 0.6rem; font-weight: 700; background: var(--black); color: var(--yellow); padding: 2px 8px; border-radius: 999px; margin-top: 4px; align-self: flex-start; }
+.card-body { padding: 0.9rem 1rem; border-top: 1.5px solid var(--light); }
+.card-reason { font-size: 0.82rem; line-height: 1.65; color: var(--black); margin-bottom: 0.7rem; }
+.how-block { background: #F5EEFF; border-radius: 10px; padding: 0.6rem 0.8rem; }
+.how-label { font-size: 0.6rem; font-weight: 700; color: var(--purple); letter-spacing: 0.08em; margin-bottom: 4px; display: flex; align-items: center; gap: 4px; }
+.how-label::before { content: ''; display: block; width: 6px; height: 6px; background: var(--purple); border-radius: 50%; }
+.how-text { font-size: 0.75rem; color: #555; line-height: 1.55; }
+.card-footer { padding: 0.75rem 1rem; border-top: 1.5px solid var(--light); display: flex; align-items: center; justify-content: flex-end; }
+.buy-btn { display: inline-flex; align-items: center; gap: 5px; background: var(--black); color: var(--yellow); font-family: 'Black Han Sans', sans-serif; font-size: 0.8rem; text-decoration: none; padding: 8px 18px; border-radius: 999px; }
+footer { border-top: 3px solid var(--black); background: var(--yellow); padding: 1.2rem; display: flex; flex-direction: column; gap: 4px; font-size: 0.68rem; font-weight: 700; color: var(--black); }
+footer .light { font-weight: 400; color: #666; }
+</style>
+</head>
+<body>
+<header>
+  <a class="logo" href="index.html">🐰 간식토끼 추천템</a>
+  <a class="back-link" href="index.html">← 전체 목록</a>
+</header>
+<div class="page-hero">
+  <p class="page-hero-num">CATEGORY 03</p>
+  <h1>이거 진짜 초강추템 🧹</h1>
+  <p>한 번 사면 다른 거 못 씀. 이미 여러 번 검증 완료. 그냥 이거 사.</p>
+</div>
+<div class="cards-wrap">
+
+  <div class="item-card">
+    <div class="card-top">
+      <div class="card-icon">🍽️</div>
+      <div class="card-header">
+        <div class="card-name">식세기 세제 타블렛</div>
+        <div class="card-brand">BLUELAND Plastic-Free Dishwasher Tablets</div>
+        <span class="card-period">8개월째</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-reason">써본 것 중 케미컬 냄새 없고, 잔여물 적고, 세정력 최고. 이거 쓰고 나서 다른 거 못 씀.</div>
+      <div class="how-block">
+        <div class="how-label">사용법</div>
+        <div class="how-text">건덕스만 헹구고 식세기 돌리면 됨. 기름기 많이 남아있을수록 세정 잘 됨 (신기).</div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a class="buy-btn" href="https://amzn.to/41QbifP" target="_blank">Amazon에서 보기 →</a>
+    </div>
+  </div>
+
+  <div class="item-card">
+    <div class="card-top">
+      <div class="card-icon">👕</div>
+      <div class="card-header">
+        <div class="card-name">옷 얼룩 제거제</div>
+        <div class="card-brand">SOILOVE Laundry Spot Remover · 22oz + 128oz</div>
+        <span class="card-period">10년째</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-reason">이제까지 써본 것 중 옷 얼룩 제거 최고. 김치국물, 혈흔, 초콜렛, 기름때 다 지워짐. 10년이면 말 다 한 거 아님?</div>
+      <div class="how-block">
+        <div class="how-label">사용법</div>
+        <div class="how-text">더러운 부분에 바르고 세탁 돌리면 끝. 냄새 조금 있는데 나쁘진 않음.</div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a class="buy-btn" href="https://amzn.to/4tERCXP" target="_blank">Amazon에서 보기 →</a>
+    </div>
+  </div>
+
+</div>
+<footer>
+  <span>🐰 daily.gansik · 미국사는 먹토끼</span>
+  <span class="light">이 페이지의 링크는 Amazon Associates 링크입니다.</span>
+</footer>
+</body>
+</html>

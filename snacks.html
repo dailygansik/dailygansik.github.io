@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>간식토끼 최애 까자 — 간식토끼</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Black+Han+Sans&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --bg:#FFFBF5; --black:#1A1A1A; --gray:#777; --light:#EAE4D8; --yellow:#FFE135; --red:#FF3B3B; --orange:#FF6B35; }
+body { background: var(--bg); color: var(--black); font-family: 'Noto Sans KR', sans-serif; -webkit-font-smoothing: antialiased; }
+header { background: var(--yellow); border-bottom: 3px solid var(--black); padding: 1rem 1.2rem; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+.logo { font-family: 'Black Han Sans', sans-serif; font-size: 1.2rem; text-decoration: none; color: var(--black); }
+.back-link { font-size: 0.7rem; font-weight: 700; color: var(--black); text-decoration: none; border-bottom: 1.5px solid var(--black); }
+.page-hero { background: var(--red); color: white; padding: 2.2rem 1.4rem 1.8rem; border-bottom: 3px solid var(--black); position: relative; overflow: hidden; }
+.page-hero::after { content: '🍿'; position: absolute; right: 0.8rem; bottom: -0.8rem; font-size: 7rem; opacity: 0.15; line-height: 1; pointer-events: none; }
+.page-hero-num { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.14em; opacity: 0.6; margin-bottom: 0.5rem; }
+.page-hero h1 { font-family: 'Black Han Sans', sans-serif; font-size: clamp(1.5rem, 6vw, 2.2rem); line-height: 1.25; word-break: keep-all; margin-bottom: 0.6rem; }
+.page-hero p { font-size: 0.75rem; opacity: 0.75; line-height: 1.6; }
+.page-hero p em { font-style: normal; background: rgba(255,255,255,0.2); padding: 1px 6px; border-radius: 4px; }
+.cards-wrap { padding: 1.2rem 1.2rem 5rem; display: flex; flex-direction: column; gap: 14px; max-width: 480px; margin: 0 auto; }
+.item-card { background: white; border: 2.5px solid var(--black); border-radius: 16px; overflow: hidden; }
+.card-top { display: flex; align-items: stretch; min-height: 90px; }
+.card-icon { width: 88px; flex-shrink: 0; background: #FFF3F3; display: flex; align-items: center; justify-content: center; font-size: 2.6rem; border-right: 2.5px solid var(--black); }
+.card-header { flex: 1; padding: 0.9rem 1rem; display: flex; flex-direction: column; justify-content: center; gap: 3px; }
+.card-name { font-family: 'Black Han Sans', sans-serif; font-size: 1rem; line-height: 1.2; }
+.card-brand { font-size: 0.65rem; color: var(--gray); }
+.tag-row { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 5px; }
+.tag { font-size: 0.58rem; font-weight: 700; padding: 2px 8px; border-radius: 999px; }
+.tag-super { background: #EFFFFA; color: #00A882; border: 1.5px solid #00D4AA; }
+.tag-amzn { background: var(--black); color: var(--yellow); }
+.card-body { padding: 0.9rem 1rem; border-top: 1.5px solid var(--light); }
+.card-reason { font-size: 0.82rem; line-height: 1.65; color: var(--black); margin-bottom: 0.7rem; }
+.tip-block { background: #FFF3F3; border-radius: 10px; padding: 0.6rem 0.8rem; }
+.tip-label { font-size: 0.6rem; font-weight: 700; color: var(--red); letter-spacing: 0.08em; margin-bottom: 4px; display: flex; align-items: center; gap: 4px; }
+.tip-label::before { content: ''; display: block; width: 6px; height: 6px; background: var(--red); border-radius: 50%; }
+.tip-text { font-size: 0.75rem; color: #555; line-height: 1.55; }
+.card-footer { padding: 0.75rem 1rem; border-top: 1.5px solid var(--light); display: flex; align-items: center; justify-content: flex-end; }
+.buy-btn { display: inline-flex; align-items: center; gap: 5px; background: var(--black); color: var(--yellow); font-family: 'Black Han Sans', sans-serif; font-size: 0.8rem; text-decoration: none; padding: 8px 18px; border-radius: 999px; }
+footer { border-top: 3px solid var(--black); background: var(--yellow); padding: 1.2rem; display: flex; flex-direction: column; gap: 4px; font-size: 0.68rem; font-weight: 700; color: var(--black); }
+footer .light { font-weight: 400; color: #666; }
+</style>
+</head>
+<body>
+<header>
+  <a class="logo" href="index.html">🐰 간식토끼 추천템</a>
+  <a class="back-link" href="index.html">← 전체 목록</a>
+</header>
+<div class="page-hero">
+  <p class="page-hero-num">CATEGORY 04</p>
+  <h1>간식토끼 최애 까자 🍿</h1>
+  <p>아마존도 있는데 솔직히 <em>슈퍼에서 보이면 걍 사는 게 나음.</em></p>
+</div>
+<div class="cards-wrap">
+
+  <div class="item-card">
+    <div class="card-top">
+      <div class="card-icon">🍪</div>
+      <div class="card-header">
+        <div class="card-name">할머니 쿠키</div>
+        <div class="card-brand">Grandma's Cookies · Variety Pack</div>
+        <div class="tag-row">
+          <span class="tag tag-super">편의점에도 있음</span>
+          <span class="tag tag-amzn">Amazon 있음</span>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-reason">편의점 싸구려 감성 그 자체. 꾸덕하고 뭉개지는 식감이 좋음.</div>
+      <div class="tip-block">
+        <div class="tip-label">토끼 픽</div>
+        <div class="tip-text">제일 좋아하는 건 피넛버터랑 브라우니맛!</div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a class="buy-btn" href="https://amzn.to/41skMxw" target="_blank">Amazon에서 보기 →</a>
+    </div>
+  </div>
+
+  <div class="item-card">
+    <div class="card-top">
+      <div class="card-icon">🎁</div>
+      <div class="card-header">
+        <div class="card-name">뫄 이게 미국이다</div>
+        <div class="card-brand">The Snack Bar · Snack Care Package 40 count</div>
+        <div class="tag-row"><span class="tag tag-amzn">Amazon 있음</span></div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-reason">이정도는 플렉스 해도 되잖아여. 딱 한 번밖에 못 사봤지만 행복했음. 진짜로.</div>
+      <div class="tip-block">
+        <div class="tip-label">토끼 픽</div>
+        <div class="tip-text">한국 여행 선물, 어린이들, 친구 선물로 완벽함.</div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a class="buy-btn" href="https://amzn.to/4el7wlP" target="_blank">Amazon에서 보기 →</a>
+    </div>
+  </div>
+
+  <div class="item-card">
+    <div class="card-top">
+      <div class="card-icon">🍫</div>
+      <div class="card-header">
+        <div class="card-name">길티프리 걸스카우트 쿠키</div>
+        <div class="card-brand">Honey Mama's · Thin Mints Chocolate Fudge Bars</div>
+        <div class="tag-row"><span class="tag tag-amzn">Amazon 있음</span></div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-reason">걸스카우트 띤민트 오마주. 생꿀로 만든 퍼지바. 냉장고에 두고 먹는 건데 시원하고 맛있음.</div>
+      <div class="tip-block">
+        <div class="tip-label">토끼 픽</div>
+        <div class="tip-text">살찌는 기분 덜함. 안 찌진 않음 ㅋ</div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a class="buy-btn" href="https://amzn.to/3OfZVdQ" target="_blank">Amazon에서 보기 →</a>
+    </div>
+  </div>
+
+  <div class="item-card">
+    <div class="card-top">
+      <div class="card-icon">🥛</div>
+      <div class="card-header">
+        <div class="card-name">프로틴 파우더 (프루티 페블)</div>
+        <div class="card-brand">Dymatize × Fruity Pebbles ISO100 Whey Isolate</div>
+        <div class="tag-row"><span class="tag tag-amzn">Amazon 있음</span></div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-reason">벌크업용, 유당불내증에도 검증됨. 시리얼 먹고 남은 우유맛. 맛있음.</div>
+      <div class="tip-block">
+        <div class="tip-label">토끼 픽</div>
+        <div class="tip-text">프루티 페블 vs 코코 페블 — 나는 프루티 페블 파.</div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a class="buy-btn" href="https://amzn.to/4vKC1Ir" target="_blank">Amazon에서 보기 →</a>
+    </div>
+  </div>
+
+  <div class="item-card">
+    <div class="card-top">
+      <div class="card-icon">🍫</div>
+      <div class="card-header">
+        <div class="card-name">프로틴 파우더 (코코 페블)</div>
+        <div class="card-brand">Dymatize × Cocoa Pebbles ISO100 Whey Isolate</div>
+        <div class="tag-row"><span class="tag tag-amzn">Amazon 있음</span></div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-reason">같은 제품 다른 맛. 코코 페블 시리얼 우유맛. 이것도 맛있음.</div>
+      <div class="tip-block">
+        <div class="tip-label">토끼 픽</div>
+        <div class="tip-text">초코 좋아하면 이쪽. 근데 나는 프루티가 더 좋긴 함.</div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a class="buy-btn" href="https://amzn.to/4taq78I" target="_blank">Amazon에서 보기 →</a>
+    </div>
+  </div>
+
+  <div class="item-card">
+    <div class="card-top">
+      <div class="card-icon">🍜</div>
+      <div class="card-header">
+        <div class="card-name">라면 토핑</div>
+        <div class="card-brand">Ramen Bae · Classic Seafood &amp; Veggie Mix</div>
+        <div class="tag-row"><span class="tag tag-amzn">Amazon 있음</span></div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-reason">아 우리 이정도는 먹어도 되잖아여. 짜파, 컵라면, 계란찜, 일반라면에 더 넣어서 먹음.</div>
+      <div class="tip-block">
+        <div class="tip-label">토끼 픽</div>
+        <div class="tip-text">부자된 기분!</div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a class="buy-btn" href="https://amzn.to/4mLSZlD" target="_blank">Amazon에서 보기 →</a>
+    </div>
+  </div>
+
+</div>
+<footer>
+  <span>🐰 daily.gansik · 미국사는 먹토끼</span>
+  <span class="light">이 페이지의 링크는 Amazon Associates 링크입니다.</span>
+</footer>
+</body>
+</html>

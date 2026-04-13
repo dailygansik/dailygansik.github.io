@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>야매요리 장비빨 — 간식토끼</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Black+Han+Sans&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --bg:#FFFBF5; --black:#1A1A1A; --gray:#777; --light:#EAE4D8; --yellow:#FFE135; --mint:#00D4AA; --orange:#FF6B35; --accent:#00D4AA; }
+body { background: var(--bg); color: var(--black); font-family: 'Noto Sans KR', sans-serif; -webkit-font-smoothing: antialiased; }
+header { background: var(--yellow); border-bottom: 3px solid var(--black); padding: 1rem 1.2rem; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+.logo { font-family: 'Black Han Sans', sans-serif; font-size: 1.2rem; text-decoration: none; color: var(--black); }
+.back-link { font-size: 0.7rem; font-weight: 700; color: var(--black); text-decoration: none; border-bottom: 1.5px solid var(--black); }
+.page-hero { background: var(--mint); color: var(--black); padding: 2.2rem 1.4rem 1.8rem; border-bottom: 3px solid var(--black); position: relative; overflow: hidden; }
+.page-hero::after { content: '🍳'; position: absolute; right: 0.8rem; bottom: -0.8rem; font-size: 7rem; opacity: 0.15; line-height: 1; pointer-events: none; }
+.page-hero-num { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.14em; opacity: 0.5; margin-bottom: 0.5rem; }
+.page-hero h1 { font-family: 'Black Han Sans', sans-serif; font-size: clamp(1.5rem, 6vw, 2.2rem); line-height: 1.25; word-break: keep-all; margin-bottom: 0.6rem; }
+.page-hero p { font-size: 0.75rem; opacity: 0.65; line-height: 1.6; }
+.cards-wrap { padding: 1.2rem 1.2rem 5rem; display: flex; flex-direction: column; gap: 14px; max-width: 480px; margin: 0 auto; }
+.item-card { background: white; border: 2.5px solid var(--black); border-radius: 16px; overflow: hidden; }
+.card-top { display: flex; align-items: stretch; min-height: 90px; }
+.card-icon { width: 88px; flex-shrink: 0; background: #EFFFFA; display: flex; align-items: center; justify-content: center; font-size: 2.6rem; border-right: 2.5px solid var(--black); }
+.card-header { flex: 1; padding: 0.9rem 1rem; display: flex; flex-direction: column; justify-content: center; gap: 3px; }
+.card-name { font-family: 'Black Han Sans', sans-serif; font-size: 1rem; line-height: 1.2; }
+.card-brand { font-size: 0.65rem; color: var(--gray); }
+.card-period { display: inline-block; font-size: 0.6rem; font-weight: 700; background: var(--black); color: var(--yellow); padding: 2px 8px; border-radius: 999px; margin-top: 4px; align-self: flex-start; }
+.card-body { padding: 0.9rem 1rem; border-top: 1.5px solid var(--light); }
+.card-reason { font-size: 0.82rem; line-height: 1.65; color: var(--black); margin-bottom: 0.7rem; }
+.how-block { background: #EFFFFA; border-radius: 10px; padding: 0.6rem 0.8rem; }
+.how-label { font-size: 0.6rem; font-weight: 700; color: #00A882; letter-spacing: 0.08em; margin-bottom: 4px; display: flex; align-items: center; gap: 4px; }
+.how-label::before { content: ''; display: block; width: 6px; height: 6px; background: var(--mint); border-radius: 50%; }
+.how-text { font-size: 0.75rem; color: #555; line-height: 1.55; }
+.card-footer { padding: 0.75rem 1rem; border-top: 1.5px solid var(--light); display: flex; align-items: center; justify-content: flex-end; }
+.buy-btn { display: inline-flex; align-items: center; gap: 5px; background: var(--black); color: var(--yellow); font-family: 'Black Han Sans', sans-serif; font-size: 0.8rem; text-decoration: none; padding: 8px 18px; border-radius: 999px; }
+.buy-btn:active { opacity: 0.8; }
+footer { border-top: 3px solid var(--black); background: var(--yellow); padding: 1.2rem; display: flex; flex-direction: column; gap: 4px; font-size: 0.68rem; font-weight: 700; color: var(--black); }
+footer .light { font-weight: 400; color: #666; }
+</style>
+</head>
+<body>
+<header>
+  <a class="logo" href="index.html">🐰 간식토끼 추천템</a>
+  <a class="back-link" href="index.html">← 전체 목록</a>
+</header>
+<div class="page-hero">
+  <p class="page-hero-num">CATEGORY 02</p>
+  <h1>야매요리 장비빨 🍳</h1>
+  <p>요리 실력보다 장비가 먼저. 이것들 없으면 시작도 안 함.</p>
+</div>
+<div class="cards-wrap">
+
+  <div class="item-card">
+    <div class="card-top">
+      <div class="card-icon">🔥</div>
+      <div class="card-header">
+        <div class="card-name">토스터 오븐</div>
+        <div class="card-brand">Breville BOV450XL Mini Smart Oven</div>
+        <span class="card-period">5년째</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-reason">에어프라이어 + 토스터 + 오븐 합체. 작고 예쁨. 이거 하나로 거의 다 됨.</div>
+      <div class="how-block">
+        <div class="how-label">야매 사용법</div>
+        <div class="how-text">연어, 햄버거 패티, 빵류, 남은 음식 데우기.</div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a class="buy-btn" href="https://amzn.to/48InKSl" target="_blank">Amazon에서 보기 →</a>
+    </div>
+  </div>
+
+  <div class="item-card">
+    <div class="card-top">
+      <div class="card-icon">🥘</div>
+      <div class="card-header">
+        <div class="card-name">인스턴트 팟</div>
+        <div class="card-brand">Instant Pot Duo 7-in-1</div>
+        <span class="card-period">1년째</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-reason">그냥 다 넣고 끝. 야매곰탕 6시간을 1시간 반으로 단축시켜준 물건.</div>
+      <div class="how-block">
+        <div class="how-label">야매 사용법</div>
+        <div class="how-text">곰탕, 김찌, 갈비탕. 재료 때려넣고 버튼 누르면 됨.</div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a class="buy-btn" href="https://amzn.to/4ejaibf" target="_blank">Amazon에서 보기 →</a>
+    </div>
+  </div>
+
+  <div class="item-card">
+    <div class="card-top">
+      <div class="card-icon">🌿</div>
+      <div class="card-header">
+        <div class="card-name">수경재배 키트</div>
+        <div class="card-brand">URUQ Hydroponics Growing System</div>
+        <span class="card-period">4년째</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-reason">깻잎, 고수, 바질 등 애매한 허브 필요할 때. 수경재배라 벌레 안 꼬임. 수확 시작하면 뿜뿜 난리남.</div>
+      <div class="how-block">
+        <div class="how-label">야매 사용법</div>
+        <div class="how-text">4주 후부터 수확 가능. 잎사귀 엄청 연함.</div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a class="buy-btn" href="https://amzn.to/3OlzMu7" target="_blank">Amazon에서 보기 →</a>
+    </div>
+  </div>
+
+  <div class="item-card">
+    <div class="card-top">
+      <div class="card-icon">🥚</div>
+      <div class="card-header">
+        <div class="card-name">계란 찜기</div>
+        <div class="card-brand">CACHOO 14-Egg Stainless Steel Egg Boiler</div>
+        <span class="card-period">6개월째</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-reason">도시락용 삶은 계란. 껍질 잘 까지고 반숙 잘 됨. 생각보다 인생템.</div>
+      <div class="how-block">
+        <div class="how-label">야매 사용법</div>
+        <div class="how-text">주말에 12개씩 삶아서 지퍼백 소금물에 담가 감동란으로.</div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a class="buy-btn" href="https://amzn.to/48yYjCL" target="_blank">Amazon에서 보기 →</a>
+    </div>
+  </div>
+
+</div>
+<footer>
+  <span>🐰 daily.gansik · 미국사는 먹토끼</span>
+  <span class="light">이 페이지의 링크는 Amazon Associates 링크입니다.</span>
+</footer>
+</body>
+</html>

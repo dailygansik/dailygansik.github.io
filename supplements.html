@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>아프냐? 나도 아프다. 내가 먹는 영양제 — 간식토끼</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Black+Han+Sans&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --bg:#FFFBF5; --black:#1A1A1A; --gray:#777; --light:#EAE4D8; --yellow:#FFE135; --pink:#FF6B9D; --mint:#00D4AA; --orange:#FF6B35; --accent:#FF6B9D; }
+body { background: var(--bg); color: var(--black); font-family: 'Noto Sans KR', sans-serif; -webkit-font-smoothing: antialiased; }
+
+header { background: var(--yellow); border-bottom: 3px solid var(--black); padding: 1rem 1.2rem; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+.logo { font-family: 'Black Han Sans', sans-serif; font-size: 1.2rem; text-decoration: none; color: var(--black); }
+.back-link { font-size: 0.7rem; font-weight: 700; color: var(--black); text-decoration: none; border-bottom: 1.5px solid var(--black); }
+
+.page-hero { background: var(--pink); color: white; padding: 2.2rem 1.4rem 1.8rem; border-bottom: 3px solid var(--black); position: relative; overflow: hidden; }
+.page-hero::after { content: '💊'; position: absolute; right: 0.8rem; bottom: -0.8rem; font-size: 7rem; opacity: 0.15; pointer-events: none; line-height: 1; }
+.page-hero-num { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.14em; opacity: 0.6; margin-bottom: 0.5rem; }
+.page-hero h1 { font-family: 'Black Han Sans', sans-serif; font-size: clamp(1.5rem, 6vw, 2.2rem); line-height: 1.25; word-break: keep-all; margin-bottom: 0.6rem; }
+.page-hero p { font-size: 0.75rem; opacity: 0.75; line-height: 1.6; }
+
+.cards-wrap { padding: 1.2rem 1.2rem 5rem; display: flex; flex-direction: column; gap: 14px; max-width: 480px; margin: 0 auto; }
+
+/* ITEM CARD */
+.item-card {
+  background: white;
+  border: 2.5px solid var(--black);
+  border-radius: 16px;
+  overflow: hidden;
+}
+.card-top {
+  display: flex; align-items: stretch; min-height: 90px;
+}
+.card-icon {
+  width: 88px; flex-shrink: 0;
+  background: #FFF0F7;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2.6rem;
+  border-right: 2.5px solid var(--black);
+}
+.card-header { flex: 1; padding: 0.9rem 1rem; display: flex; flex-direction: column; justify-content: center; gap: 3px; }
+.card-name { font-family: 'Black Han Sans', sans-serif; font-size: 1rem; line-height: 1.2; }
+.card-brand { font-size: 0.65rem; color: var(--gray); }
+.card-period {
+  display: inline-block; font-size: 0.6rem; font-weight: 700;
+  background: var(--black); color: var(--yellow);
+  padding: 2px 8px; border-radius: 999px; margin-top: 4px; align-self: flex-start;
+}
+
+.card-body { padding: 0.9rem 1rem; border-top: 1.5px solid var(--light); }
+.card-reason { font-size: 0.82rem; line-height: 1.65; color: var(--black); margin-bottom: 0.7rem; }
+
+.how-block { background: #FFF5FB; border-radius: 10px; padding: 0.6rem 0.8rem; }
+.how-label { font-size: 0.6rem; font-weight: 700; color: var(--pink); letter-spacing: 0.08em; margin-bottom: 4px; display: flex; align-items: center; gap: 4px; }
+.how-label::before { content: ''; display: block; width: 6px; height: 6px; background: var(--pink); border-radius: 50%; }
+.how-text { font-size: 0.75rem; color: #555; line-height: 1.55; }
+
+.card-footer {
+  padding: 0.75rem 1rem;
+  border-top: 1.5px solid var(--light);
+  display: flex; align-items: center; justify-content: flex-end;
+}
+.buy-btn {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: var(--black); color: var(--yellow);
+  font-family: 'Black Han Sans', sans-serif; font-size: 0.8rem;
+  text-decoration: none; padding: 8px 18px;
+  border-radius: 999px; border: 2px solid var(--black);
+  transition: background 0.12s, color 0.12s;
+}
+.buy-btn:active { background: var(--yellow); color: var(--black); }
+
+footer { border-top: 3px solid var(--black); background: var(--yellow); padding: 1.2rem; display: flex; flex-direction: column; gap: 4px; font-size: 0.68rem; font-weight: 700; color: var(--black); }
+footer .light { font-weight: 400; color: #666; }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="logo" href="index.html">🐰 간식토끼 추천템</a>
+  <a class="back-link" href="index.html">← 전체 목록</a>
+</header>
+
+<div class="page-hero">
+  <p class="page-hero-num">CATEGORY 01</p>
+  <h1>아프냐? 나도 아프다.<br>내가 먹는 영양제 💊</h1>
+  <p>직접 구매해서 지금도 먹는 것들만. 효과 없으면 안 올림.</p>
+</div>
+
+<div class="cards-wrap">
+
+  <div class="item-card">
+    <div class="card-top">
+      <div class="card-icon">🦠</div>
+      <div class="card-header">
+        <div class="card-name">L-글루타민</div>
+        <div class="card-brand">NOW Foods · 500mg · 120캡슐</div>
+        <span class="card-period">1년 반째 매일</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-reason">장내 누수 때문에 먹기 시작. 아침 끙 증가, 변 색 개선. 체감 효과 확실함.</div>
+      <div class="how-block">
+        <div class="how-label">내가 먹는법</div>
+        <div class="how-text">아침 기상 직후 공복에 섭취.</div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a class="buy-btn" href="https://amzn.to/4tGLjmH" target="_blank">Amazon에서 보기 →</a>
+    </div>
+  </div>
+
+  <div class="item-card">
+    <div class="card-top">
+      <div class="card-icon">🦋</div>
+      <div class="card-header">
+        <div class="card-name">유산균 프로바이오틱</div>
+        <div class="card-brand">NOW Foods · Probiotic-10 · 25 Billion</div>
+        <span class="card-period">2년째 격월</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-reason">장내 미생물, 장건강, 해피끙. 매일 먹으면 좋은데 잊어버림.</div>
+      <div class="how-block">
+        <div class="how-label">내가 먹는법</div>
+        <div class="how-text">아침 기상 직후 공복. 생각날 때만.</div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a class="buy-btn" href="https://amzn.to/4eh9hjR" target="_blank">Amazon에서 보기 →</a>
+    </div>
+  </div>
+
+  <div class="item-card">
+    <div class="card-top">
+      <div class="card-icon">⚡</div>
+      <div class="card-header">
+        <div class="card-name">비타민 B 컴플렉스</div>
+        <div class="card-brand">Life Extension BioActive Complete B-Complex</div>
+        <span class="card-period">5년째 매일</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-reason">에너지, 집중력, 피로회복. 5년 됐으면 신뢰 아님? 다른 약과 병행이라 ½ dose만.</div>
+      <div class="how-block">
+        <div class="how-label">내가 먹는법</div>
+        <div class="how-text">아침 기상 직후 공복.</div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a class="buy-btn" href="https://amzn.to/4t9Gnad" target="_blank">Amazon에서 보기 →</a>
+    </div>
+  </div>
+
+  <div class="item-card">
+    <div class="card-top">
+      <div class="card-icon">🍋</div>
+      <div class="card-header">
+        <div class="card-name">비타민 C 파우더</div>
+        <div class="card-brand">Life Extension Buffered Vitamin C Powder</div>
+        <span class="card-period">4년째 매일</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-reason">알약 못 삼켜서 파우더로. 활성산소, 에너지, 위장건강, 피부. 무맛에 탄산 효과 있음.</div>
+      <div class="how-block">
+        <div class="how-label">내가 먹는법</div>
+        <div class="how-text">무설탕 아이스티나 탄산수에 섞어서 하루종일 마심. 변비일 때 한 잔 마시면 직방.</div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a class="buy-btn" href="https://amzn.to/4mJSDMl" target="_blank">Amazon에서 보기 →</a>
+    </div>
+  </div>
+
+  <div class="item-card">
+    <div class="card-top">
+      <div class="card-icon">🐟</div>
+      <div class="card-header">
+        <div class="card-name">오메가3 리퀴드</div>
+        <div class="card-brand">Nordic Naturals · Lemon Flavor</div>
+        <span class="card-period">4년째</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-reason">위장기능, 심혈관. 비린내 거의 없어서 먹을 만함. 액체라 흡수도 빠른 듯.</div>
+      <div class="how-block">
+        <div class="how-label">내가 먹는법</div>
+        <div class="how-text">점심 후 주 2-3회 한 숟갈. 좋은 지방 부족하다 싶을 때.</div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a class="buy-btn" href="https://amzn.to/4edom68" target="_blank">Amazon에서 보기 →</a>
+    </div>
+  </div>
+
+  <div class="item-card">
+    <div class="card-top">
+      <div class="card-icon">🔋</div>
+      <div class="card-header">
+        <div class="card-name">코큐텐</div>
+        <div class="card-brand">Sports Research CoQ10 · 100mg</div>
+        <span class="card-period">2년째</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-reason">미토콘드리아, 에너지, 심혈관. 안 아플 땐 잊어버리고 아플 때만 먹음. 그래도 계속 삼.</div>
+      <div class="how-block">
+        <div class="how-label">내가 먹는법</div>
+        <div class="how-text">아프거나 피곤할 때 점심 즈음.</div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a class="buy-btn" href="https://amzn.to/4te2DzQ" target="_blank">Amazon에서 보기 →</a>
+    </div>
+  </div>
+
+  <div class="item-card">
+    <div class="card-top">
+      <div class="card-icon">🍊</div>
+      <div class="card-header">
+        <div class="card-name">마그네슘 리퀴드</div>
+        <div class="card-brand">Nature's Answer · Malate &amp; Glycinate · 오렌지맛</div>
+        <span class="card-period">1년째 (설사 없음!)</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-reason">에너지, 근육건강. 키토나 육식할 때 꼭 필요. 마그 먹으면 설사한다는 사람 있는데 이건 진짜 없음.</div>
+      <div class="how-block">
+        <div class="how-label">내가 먹는법</div>
+        <div class="how-text">점심~간식 즈음에 디저트처럼 마심. 맛있음.</div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a class="buy-btn" href="https://amzn.to/427bTcM" target="_blank">Amazon에서 보기 →</a>
+    </div>
+  </div>
+
+  <div class="item-card">
+    <div class="card-top">
+      <div class="card-icon">🍬</div>
+      <div class="card-header">
+        <div class="card-name">종합비타민 젤리</div>
+        <div class="card-brand">SmartyPants Women's Multivitamin Gummies</div>
+        <span class="card-period">1년 반째</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-reason">내가 원하는 성분이 다 들어있음. 그리고 맛있음. 단 거 땡길 때 핑계로 먹음.</div>
+      <div class="how-block">
+        <div class="how-label">내가 먹는법</div>
+        <div class="how-text">아무 때나 하루 2-3개.</div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a class="buy-btn" href="https://amzn.to/4vriQ6a" target="_blank">Amazon에서 보기 →</a>
+    </div>
+  </div>
+
+  <div class="item-card">
+    <div class="card-top">
+      <div class="card-icon">🧠</div>
+      <div class="card-header">
+        <div class="card-name">뉴로 마그네슘</div>
+        <div class="card-brand">Life Extension Neuro-Mag Magnesium L-Threonate</div>
+        <span class="card-period">4년째</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-reason">일반 마그네슘이랑 다름. 뇌 혈관 통과 가능한 마그네슘. 수면, 불안, 뇌건강 용.</div>
+      <div class="how-block">
+        <div class="how-label">내가 먹는법</div>
+        <div class="how-text">자기 30분 전. 주 3회 정도.</div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a class="buy-btn" href="https://amzn.to/4snHCBf" target="_blank">Amazon에서 보기 →</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <span>🐰 daily.gansik · 미국사는 먹토끼</span>
+  <span class="light">이 페이지의 링크는 Amazon Associates 링크입니다.</span>
+</footer>
+</body>
+</html>

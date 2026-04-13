@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>간식토끼 추천템</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Black+Han+Sans&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #FFFBF5; --black: #1A1A1A; --gray: #777;
+  --yellow: #FFE135; --pink: #FF6B9D; --mint: #00D4AA;
+  --orange: #FF6B35; --red: #FF3B3B;
+}
+body { background: var(--bg); color: var(--black); font-family: 'Noto Sans KR', sans-serif; -webkit-font-smoothing: antialiased; }
+
+header {
+  background: var(--yellow); border-bottom: 3px solid var(--black);
+  padding: 1rem 1.2rem; display: flex; align-items: center; justify-content: space-between;
+  position: sticky; top: 0; z-index: 100;
+}
+.logo { font-family: 'Black Han Sans', sans-serif; font-size: 1.2rem; text-decoration: none; color: var(--black); }
+.threads-link { font-size: 0.7rem; font-weight: 700; color: var(--black); text-decoration: none; border-bottom: 1.5px solid var(--black); }
+
+.hero {
+  background: var(--black); color: var(--yellow);
+  padding: 2.8rem 1.4rem 2.4rem;
+  border-bottom: 3px solid var(--black);
+  position: relative; overflow: hidden;
+}
+.hero::before { content: '🐰'; position: absolute; right: 0.5rem; top: 50%; transform: translateY(-50%); font-size: 9rem; opacity: 0.08; pointer-events: none; }
+.hero-tag { display: inline-block; background: var(--pink); color: white; font-size: 0.62rem; font-weight: 700; padding: 3px 10px; border-radius: 999px; margin-bottom: 1rem; }
+.hero h1 { font-family: 'Black Han Sans', sans-serif; font-size: clamp(1.6rem, 7vw, 2.5rem); line-height: 1.35; word-break: keep-all; margin-bottom: 1.2rem; }
+.hero h1 em { font-style: normal; color: var(--mint); }
+.hero-badges { display: flex; gap: 7px; flex-wrap: wrap; margin-bottom: 1.3rem; }
+.badge { font-size: 0.68rem; font-weight: 700; padding: 4px 12px; border-radius: 999px; }
+.badge-no { color: var(--yellow); border: 2px solid var(--yellow); }
+.badge-yes { background: var(--orange); color: white; }
+.hero-sub { font-size: 0.75rem; color: #aaa; line-height: 1.8; }
+.hero-sub a { color: var(--mint); text-decoration: none; border-bottom: 1px solid var(--mint); }
+
+.section-label { padding: 1.6rem 1.2rem 0.7rem; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray); }
+
+.cat-grid { padding: 0 1.2rem 5rem; display: flex; flex-direction: column; gap: 12px; max-width: 480px; margin: 0 auto; }
+
+.cat-card {
+  display: flex; align-items: stretch;
+  border: 2.5px solid var(--black); border-radius: 16px;
+  text-decoration: none; color: var(--black);
+  background: white; overflow: hidden;
+  transition: transform 0.1s, box-shadow 0.1s;
+  min-height: 110px;
+}
+.cat-card:active { transform: scale(0.98); }
+
+.cat-thumb {
+  width: 100px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 3rem;
+  border-right: 2.5px solid var(--black);
+}
+.cat-card.c1 .cat-thumb { background: #FFF0F7; }
+.cat-card.c2 .cat-thumb { background: #EFFFFA; }
+.cat-card.c3 .cat-thumb { background: #FFFBEE; }
+.cat-card.c4 .cat-thumb { background: #FFF0F0; }
+
+.cat-body { flex: 1; padding: 1rem 1rem 1rem 1.1rem; display: flex; flex-direction: column; justify-content: space-between; }
+.cat-num { font-size: 0.58rem; font-weight: 700; letter-spacing: 0.1em; color: var(--gray); margin-bottom: 0.3rem; }
+.cat-title { font-family: 'Black Han Sans', sans-serif; font-size: 1rem; line-height: 1.3; margin-bottom: 0.4rem; }
+.cat-desc { font-size: 0.7rem; color: var(--gray); line-height: 1.5; }
+.cat-foot { display: flex; align-items: center; justify-content: space-between; margin-top: 0.7rem; padding-top: 0.6rem; border-top: 1.5px solid #EAE4D8; }
+.cat-count { font-size: 0.65rem; color: var(--gray); }
+.cat-arrow { font-size: 0.9rem; }
+
+footer { border-top: 3px solid var(--black); background: var(--yellow); padding: 1.2rem; display: flex; flex-direction: column; gap: 4px; font-size: 0.68rem; font-weight: 700; color: var(--black); }
+footer .light { font-weight: 400; color: #666; }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="logo" href="index.html">🐰 간식토끼 추천템</a>
+  <a class="threads-link" href="https://www.threads.net/@daily.gansik" target="_blank">@daily.gansik →</a>
+</header>
+
+<section class="hero">
+  <span class="hero-tag">🐰 미국사는 먹토끼</span>
+  <h1>안뇽 여러분.<br>아무도 광고 안줘서<br><em>걍 내가 만듬.</em></h1>
+  <div class="hero-badges">
+    <span class="badge badge-no">협찬 없음</span>
+    <span class="badge badge-no">광고 없음</span>
+    <span class="badge badge-yes">내가 쓰는 찐템 ✓</span>
+  </div>
+  <p class="hero-sub">광고·홍보 문의 환영 🙏 강아지 자랑도 홍보해줌.<br>
+  <a href="mailto:daily.gansik@gmail.com">daily.gansik@gmail.com</a></p>
+</section>
+
+<p class="section-label">카테고리 선택</p>
+
+<div class="cat-grid">
+  <a class="cat-card c1" href="supplements.html">
+    <div class="cat-thumb">💊</div>
+    <div class="cat-body">
+      <div>
+        <div class="cat-num">CATEGORY 01</div>
+        <div class="cat-title">아프냐? 나도 아프다.<br>내가 먹는 영양제</div>
+        <div class="cat-desc">장, 뇌, 혈관, 기력 — 내 몸이 버티는 이유가 아마 이것들.</div>
+      </div>
+      <div class="cat-foot"><span class="cat-count">9개</span><span class="cat-arrow">↗</span></div>
+    </div>
+  </a>
+
+  <a class="cat-card c2" href="kitchen.html">
+    <div class="cat-thumb">🍳</div>
+    <div class="cat-body">
+      <div>
+        <div class="cat-num">CATEGORY 02</div>
+        <div class="cat-title">야매요리 장비빨</div>
+        <div class="cat-desc">요리 실력보다 장비가 먼저. 이것들 없으면 시작도 안 함.</div>
+      </div>
+      <div class="cat-foot"><span class="cat-count">4개</span><span class="cat-arrow">↗</span></div>
+    </div>
+  </a>
+
+  <a class="cat-card c3" href="living.html">
+    <div class="cat-thumb">🧹</div>
+    <div class="cat-body">
+      <div>
+        <div class="cat-num">CATEGORY 03</div>
+        <div class="cat-title">이거 진짜 초강추템</div>
+        <div class="cat-desc">한 번 사면 다른 거 못 씀. 여러 번 검증 완료.</div>
+      </div>
+      <div class="cat-foot"><span class="cat-count">2개</span><span class="cat-arrow">↗</span></div>
+    </div>
+  </a>
+
+  <a class="cat-card c4" href="snacks.html">
+    <div class="cat-thumb">🍿</div>
+    <div class="cat-body">
+      <div>
+        <div class="cat-num">CATEGORY 04</div>
+        <div class="cat-title">간식토끼 최애 까자</div>
+        <div class="cat-desc">슈퍼에서 보이면 걍 사. 아마존도 있긴 함.</div>
+      </div>
+      <div class="cat-foot"><span class="cat-count">6개</span><span class="cat-arrow">↗</span></div>
+    </div>
+  </a>
+</div>
+
+<footer>
+  <span>🐰 daily.gansik · 미국사는 먹토끼</span>
+  <span class="light">이 페이지의 링크는 Amazon Associates 링크입니다.</span>
+</footer>
+
+</body>
+</html>
