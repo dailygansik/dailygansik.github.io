@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>간식토끼 @daily.gansik</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Black+Han+Sans&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --black: #1A1A1A;
+  --yellow: #FFE135;
+  --pink: #FF6B9D;
+  --mint: #00D4AA;
+  --orange: #FF6B35;
+  --purple: #A855F7;
+  --gray: #777;
+  --light: #EAE4D8;
+}
+body {
+  background: var(--black);
+  color: white;
+  font-family: 'Noto Sans KR', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.2rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+/* PROFILE */
+.profile {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.avatar {
+  width: 80px; height: 80px;
+  background: var(--yellow);
+  border-radius: 50%;
+  border: 3px solid var(--yellow);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2.8rem;
+  margin: 0 auto 1rem;
+}
+.profile-name {
+  font-family: 'Black Han Sans', sans-serif;
+  font-size: 1.4rem;
+  color: var(--yellow);
+  margin-bottom: 0.3rem;
+}
+.profile-handle {
+  font-size: 0.75rem;
+  color: #888;
+  margin-bottom: 0.8rem;
+}
+.profile-bio {
+  font-size: 0.8rem;
+  color: #bbb;
+  line-height: 1.7;
+}
+
+/* LINKS */
+.links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.link-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.2rem;
+  border-radius: 16px;
+  text-decoration: none;
+  border: 2.5px solid transparent;
+  transition: transform 0.1s, opacity 0.1s;
+  position: relative;
+  overflow: hidden;
+}
+.link-card:active { transform: scale(0.97); opacity: 0.9; }
+
+.link-card.shop  { background: #FFF9E6; border-color: var(--yellow); color: var(--black); }
+.link-card.blog  { background: #FFF0F7; border-color: var(--pink); color: var(--black); }
+.link-card.threads { background: #EFFFFA; border-color: var(--mint); color: var(--black); }
+.link-card.email { background: #F3E8FF; border-color: var(--purple); color: var(--black); }
+
+.link-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+  width: 44px;
+  text-align: center;
+}
+.link-body { flex: 1; }
+.link-title {
+  font-family: 'Black Han Sans', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.2;
+  margin-bottom: 3px;
+}
+.link-desc {
+  font-size: 0.7rem;
+  opacity: 0.6;
+  line-height: 1.4;
+}
+.link-arrow {
+  font-size: 1rem;
+  opacity: 0.4;
+  flex-shrink: 0;
+}
+
+/* FOOTER */
+.bio-footer {
+  margin-top: 2.5rem;
+  font-size: 0.62rem;
+  color: #444;
+  text-align: center;
+  line-height: 1.6;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="profile">
+    <div class="avatar">🐰</div>
+    <div class="profile-name">오늘의간식</div>
+    <div class="profile-handle">@daily.gansik</div>
+    <div class="profile-bio">미국사는 먹토끼 🐰<br>음식에 대한 탁상론과 간식 자랑하는 곳</div>
+  </div>
+
+  <div class="links">
+
+    <a class="link-card shop" href="https://dailygansik.github.io" target="_blank">
+      <div class="link-icon">🛒</div>
+      <div class="link-body">
+        <div class="link-title">간식토끼 추천템</div>
+        <div class="link-desc">간식토끼가 추천하는 미국템 함보실?</div>
+      </div>
+      <div class="link-arrow">↗</div>
+    </a>
+
+    <a class="link-card blog" href="https://dailygansik.substack.com" target="_blank">
+      <div class="link-icon">✍️</div>
+      <div class="link-body">
+        <div class="link-title">간식토끼 블로그</div>
+        <div class="link-desc">진지한 생각, 미국생활 팁, 야매레시피 등 별별얘기얘기</div>
+      </div>
+      <div class="link-arrow">↗</div>
+    </a>
+
+    <a class="link-card threads" href="https://www.threads.net/@daily.gansik" target="_blank">
+      <div class="link-icon">🧵</div>
+      <div class="link-body">
+        <div class="link-title">Threads</div>
+        <div class="link-desc">스레드 친구하실?</div>
+      </div>
+      <div class="link-arrow">↗</div>
+    </a>
+
+    <a class="link-card email" href="mailto:daily.gansik@gmail.com">
+      <div class="link-icon">📩</div>
+      <div class="link-body">
+        <div class="link-title">이메일</div>
+        <div class="link-desc">여기로 연락 바람</div>
+      </div>
+      <div class="link-arrow">↗</div>
+    </a>
+
+  </div>
+
+  <div class="bio-footer">
+    광고·홍보 문의 환영 🙏 강아지 자랑도 홍보해줌.
+  </div>
+
+</div>
+
+</body>
+</html>
