@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>쓸데없지만 갖고싶은 토끼 컬렉션 — 간식토끼</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Black+Han+Sans&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --bg:#FFFBF5; --black:#1A1A1A; --gray:#777; --light:#EAE4D8; --yellow:#FFE135; --purple:#A855F7; --lavender:#F3E8FF; }
+body { background: var(--bg); color: var(--black); font-family: 'Noto Sans KR', sans-serif; -webkit-font-smoothing: antialiased; }
+header { background: var(--yellow); border-bottom: 3px solid var(--black); padding: 1rem 1.2rem; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+.logo { font-family: 'Black Han Sans', sans-serif; font-size: 1.2rem; text-decoration: none; color: var(--black); }
+.back-link { font-size: 0.7rem; font-weight: 700; color: var(--black); text-decoration: none; border-bottom: 1.5px solid var(--black); }
+
+.page-hero { background: var(--purple); color: white; padding: 2.2rem 1.4rem 1.8rem; border-bottom: 3px solid var(--black); position: relative; overflow: hidden; }
+.page-hero::after { content: '🐰'; position: absolute; right: 0.8rem; bottom: -0.8rem; font-size: 7rem; opacity: 0.15; line-height: 1; pointer-events: none; }
+.page-hero-num { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.14em; opacity: 0.6; margin-bottom: 0.5rem; }
+.page-hero h1 { font-family: 'Noto Sans KR', sans-serif; font-weight: 900; font-size: clamp(1.5rem, 6vw, 2.2rem); line-height: 1.25; word-break: keep-all; margin-bottom: 0.6rem; }
+.page-hero p { font-size: 0.75rem; opacity: 0.75; line-height: 1.6; }
+.page-hero .disclaimer { margin-top: 0.5rem; font-size: 0.68rem; opacity: 0.55; }
+
+.cards-wrap { padding: 1.2rem 1.2rem 5rem; display: flex; flex-direction: column; gap: 14px; max-width: 480px; margin: 0 auto; }
+
+.item-card { background: white; border: 2.5px solid var(--black); border-radius: 16px; overflow: hidden; }
+.card-top { display: flex; align-items: stretch; min-height: 90px; }
+.card-icon { width: 88px; flex-shrink: 0; background: var(--lavender); display: flex; align-items: center; justify-content: center; font-size: 2.6rem; border-right: 2.5px solid var(--black); }
+.card-header { flex: 1; padding: 0.9rem 1rem; display: flex; flex-direction: column; justify-content: center; gap: 3px; }
+.card-name { font-family: 'Black Han Sans', sans-serif; font-size: 1rem; line-height: 1.2; }
+.card-brand { font-size: 0.65rem; color: var(--gray); }
+.want-badge { display: inline-block; font-size: 0.6rem; font-weight: 700; background: var(--purple); color: white; padding: 2px 8px; border-radius: 999px; margin-top: 4px; align-self: flex-start; }
+
+.card-body { padding: 0.9rem 1rem; border-top: 1.5px solid var(--light); }
+.card-reason { font-size: 0.82rem; line-height: 1.65; color: var(--black); margin-bottom: 0.7rem; }
+.tip-block { background: var(--lavender); border-radius: 10px; padding: 0.6rem 0.8rem; }
+.tip-label { font-size: 0.6rem; font-weight: 700; color: var(--purple); letter-spacing: 0.08em; margin-bottom: 4px; display: flex; align-items: center; gap: 4px; }
+.tip-label::before { content: ''; display: block; width: 6px; height: 6px; background: var(--purple); border-radius: 50%; }
+.tip-text { font-size: 0.75rem; color: #555; line-height: 1.55; }
+
+.card-footer { padding: 0.75rem 1rem; border-top: 1.5px solid var(--light); display: flex; align-items: center; justify-content: flex-end; }
+.buy-btn { display: inline-flex; align-items: center; gap: 5px; background: var(--black); color: var(--yellow); font-family: 'Black Han Sans', sans-serif; font-size: 0.8rem; text-decoration: none; padding: 8px 18px; border-radius: 999px; }
+.buy-btn:active { opacity: 0.8; }
+
+footer { border-top: 3px solid var(--black); background: var(--yellow); padding: 1.2rem; display: flex; flex-direction: column; gap: 4px; font-size: 0.68rem; font-weight: 700; color: var(--black); }
+footer .light { font-weight: 400; color: #666; }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="logo" href="index.html">🐰 간식토끼 추천템</a>
+  <a class="back-link" href="index.html">← 전체 목록</a>
+</header>
+
+<div class="page-hero">
+  <p class="page-hero-num">CATEGORY 05</p>
+  <h1>쓸데없지만<br>다 있는 토끼 컬렉션 🐰</h1>
+  <p>다 있음. 자랑하는 거 맞음.</p>
+  <p class="disclaimer">※ 실용성 없음을 인지하고 있음. 그래도 삼. 후회 없음.</p>
+</div>
+
+<div class="cards-wrap">
+
+  <div class="item-card">
+    <div class="card-top">
+      <div class="card-icon">⏱️</div>
+      <div class="card-header">
+        <div class="card-name">비주얼 타이머</div>
+        <div class="card-brand">Yunbaoit Digital Visual Timer</div>
+        <span class="want-badge">나는 있지롱 💜</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-reason">집중력 위한, 혹은 너무 무리해서 일하지 않기 위해 타이머 설정.</div>
+      <div class="tip-block">
+        <div class="tip-label">토끼 픽 이유</div>
+        <div class="tip-text">기여움. 무음 가능. 사무실에 갖다둠.</div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a class="buy-btn" href="https://amzn.to/4tnmcpl" target="_blank">Amazon에서 보기 →</a>
+    </div>
+  </div>
+
+  <div class="item-card">
+    <div class="card-top">
+      <div class="card-icon">🌙</div>
+      <div class="card-header">
+        <div class="card-name">토끼 무드등</div>
+        <div class="card-brand">One Fire Easter Bunny Night Light</div>
+        <span class="want-badge">나는 있지롱 💜</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-reason">밤에 침대나 책상 위 무드등으로.</div>
+      <div class="tip-block">
+        <div class="tip-label">토끼 픽 이유</div>
+        <div class="tip-text">색깔 바꿀 수 있음. 걍 기여움.</div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a class="buy-btn" href="https://amzn.to/3QmVO0b" target="_blank">Amazon에서 보기 →</a>
+    </div>
+  </div>
+
+  <div class="item-card">
+    <div class="card-top">
+      <div class="card-icon">🧱</div>
+      <div class="card-header">
+        <div class="card-name">토끼 레고</div>
+        <div class="card-brand">LEGO Creator 3 in 1 Cute Bunny Toy</div>
+        <span class="want-badge">나는 있지롱 💜</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-reason">레고 만세. 3가지 다른 버전 조립 가능.</div>
+      <div class="tip-block">
+        <div class="tip-label">토끼 픽 이유</div>
+        <div class="tip-text">원한다면 토끼 똥 나오게도 누가 만들던데. 수치플 🫣</div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a class="buy-btn" href="https://amzn.to/4cGv16z" target="_blank">Amazon에서 보기 →</a>
+    </div>
+  </div>
+
+  <div class="item-card">
+    <div class="card-top">
+      <div class="card-icon">🧸</div>
+      <div class="card-header">
+        <div class="card-name">토끼 플러쉬 인형</div>
+        <div class="card-brand">DILLY DUDU Blossom Bunny Rabbit</div>
+        <span class="want-badge">이미 나는 있지롱 💜</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-reason">내 사랑하는 토끼들.</div>
+      <div class="tip-block">
+        <div class="tip-label">토끼 픽 이유</div>
+        <div class="tip-text">우리집에 있는 애 이름은 트루퍼 엘리자베스 윈저임. 🐰</div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a class="buy-btn" href="https://amzn.to/42kEXO8" target="_blank">Amazon에서 보기 →</a>
+    </div>
+  </div>
+
+  <div class="item-card">
+    <div class="card-top">
+      <div class="card-icon">📖</div>
+      <div class="card-header">
+        <div class="card-name">토끼 동화책</div>
+        <div class="card-brand">The Velveteen Rabbit · 100th Anniversary Edition</div>
+        <span class="want-badge">나는 있지롱 💜</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-reason">미국 클래식 동화책의 정수. 어른들도 보면 마음 찡해지는 토끼 동화.</div>
+      <div class="tip-block">
+        <div class="tip-label">토끼 픽 이유</div>
+        <div class="tip-text">나 안울었어. 진짜야. 걍 눈에 땀 쪼꼼 남. 👀💧</div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a class="buy-btn" href="https://amzn.to/4vCsMKd" target="_blank">Amazon에서 보기 →</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <span>🐰 daily.gansik · 미국사는 먹토끼</span>
+  <span class="light">이 페이지의 링크는 Amazon Associates 링크입니다.</span>
+</footer>
+</body>
+</html>
